@@ -1,13 +1,13 @@
 from random import choice
 
 existed = ['BA1954CE', 'CACA43BB', 'AE4C56CD'] #sample codes
-pattern = '1234567890ABCDEF'
 
-def generate(count = 1, length = 8):
+def generate(count = 1, length = 8, pattern = '0123456789ABCDEF'):
     '''
     Little function used for generating voucher codes for the PyFMI course.
-    count argument represents how many codes should be generated and
-    length stands for the code's length.
+    `count` represents how many codes should be generated 
+    `length` stands for the code's length.
+    `pattern` defines what chars to be uncluded in out code.
     '''
     generated = []
     fails = 0
