@@ -4,7 +4,6 @@ body {
    font-family: Inconsolata, Verdana, sans-serif;
    font-size: 12pt;
    color: #111;
-   background: #AAA;
 }
 
 h1, h2, h3 {
@@ -37,8 +36,9 @@ a:hover {
 }
 
 ul {
-   list-style: circle;
+   list-style: none;
    -webkit-column-count: 2;
+   -moz-column-count: 2;
 }
 
 dl {
@@ -60,9 +60,6 @@ dt {
 
 #doc {
    margin: 5em auto 5em auto;
-   -moz-box-shadow: 0px 0px 5px #333;
-   -webkit-box-shadow: 0px 0px 5px #333;
-   box-shadow: 0px 0px 5px #333;
    width: 720px;
    background: #FFF;
    padding: 1em 4em 5em 4em;
@@ -73,7 +70,7 @@ dt {
 }
 
 .code {
- font-weight: bolder;
+ font-weight: bold;
  text-align: left;
  margin-bottom: 0;
  border: none;
