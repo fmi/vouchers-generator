@@ -1,7 +1,5 @@
 from random import choice
 
-existed = ['BA1954CE', 'CACA43BB', 'AE4C56CD'] #sample codes
-
 def generate(count = 1, length = 8, pattern = '0123456789ABCDEF'):
     '''
     Little function used for generating voucher codes for the PyFMI course.
@@ -24,6 +22,12 @@ def generate(count = 1, length = 8, pattern = '0123456789ABCDEF'):
     return generated
 
 if __name__ == '__main__':
-    new_codes = generate(16)
-    for code in new_codes:
-        print(code)
+    existed = []
+    with open('existed', 'r+') as file:
+        for line in file:
+            existed.append(line)
+        new_codes = generate(22)
+        for code in new_codes:
+            file.write(code + '\n')
+            print(code)
+        
