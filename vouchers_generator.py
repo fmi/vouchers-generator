@@ -20,7 +20,7 @@ def generate(count = 1, length = 8, pattern = '0123456789ABCDEF'):
         else:
             generated.append(voucher)
     if fails > 0:
-        generate(fails)
+        generated += generate(fails)
     return generated
 
 if __name__ == '__main__':
