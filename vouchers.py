@@ -4,7 +4,7 @@ from datetime import date, timedelta
 def generate(count=1, existed=[], length=8, pattern='0123456789ABCDEF'):
     '''
     Generate voucher codes for the PyFMI course.
-    `count` represents how many codes should be generated 
+    `count` represents how many codes should be generated
     `existed` is a list with already existed codes
     `length` stands for the code's length.
     `pattern` defines what chars to be uncluded in out code.
