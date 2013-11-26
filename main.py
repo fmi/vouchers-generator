@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+
 import vouchers
 
 existed = []
@@ -9,7 +10,7 @@ with open('existed', 'r+') as file:
         existed.append(line)
     print("[DONE]")
     print("Generating new codes", end=' ')
-    new_codes = vouchers.generate(22, existed)
+    new_codes = vouchers.generate(140, existed)
     print("[DONE]")
     print("Successfuly generated codes:")
     for code in new_codes:
