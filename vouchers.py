@@ -35,8 +35,7 @@ def to_html(codes=[], days_valid=15, output='index.html'):
     with open('html/header.html', 'r') as header:
         html_code += header.read()
     for code in codes:
-        html_code += '<li><h1 class="code">' + str(code) + \
-                '</h1><span class="until">Валиден до ' + valid_until + '</span></li>'
+        html_code += '<li><h1 class="code">{}</h1></li>'.format(str(code))
     with open('html/footer.html', 'r') as footer:
         html_code += footer.read()
     with open('html/index.html', 'w') as file:
