@@ -3,14 +3,14 @@ import os
 
 import vouchers
 
-existed = []
+existing = []
 print("Importing already generated codes", end=' ')
-with open('existed', 'r+') as file:
+with open('existing', 'r+') as file:
     for line in file:
-        existed.append(line)
+        existing.append(line)
     print("[DONE]")
     print("Generating new codes", end=' ')
-    new_codes = vouchers.generate(140, existed)
+    new_codes = vouchers.generate(140, existing)
     print("[DONE]")
     print("Successfuly generated codes:")
     for code in new_codes:

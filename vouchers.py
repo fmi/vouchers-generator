@@ -1,11 +1,11 @@
 from random import choice
 from datetime import date, timedelta
 
-def generate(count=1, existed=[], length=8, pattern='0123456789ABCDEF'):
+def generate(count=1, existing=[], length=8, pattern='0123456789ABCDEF'):
     '''
     Generate voucher codes for the PyFMI course.
     `count` represents how many codes should be generated
-    `existed` is a list with already existed codes
+    `existing` is a list with already existing codes
     `length` stands for the code's length.
     `pattern` defines what chars to be uncluded in out code.
     '''
@@ -15,7 +15,7 @@ def generate(count=1, existed=[], length=8, pattern='0123456789ABCDEF'):
         voucher = ''
         for char in range(length):
             voucher += choice(pattern)
-        if voucher in existed:
+        if voucher in existing:
             fails += 1
         else:
             generated.append(voucher)
