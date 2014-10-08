@@ -1,7 +1,0 @@
-Just a simple voucher generator for the pyfmi course.
-Generates 100 codes by default. No validity is printed on them.
-Open the resuting HTML file in Firefox!
-
-Run it with Python >= 3:
-
-python3.0 main.py
